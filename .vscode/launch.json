@@ -6,10 +6,35 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch AstPrinter",
+            "request": "launch",
+            "mainClass": "eigen.AstPrinter",
+            "projectName": "app"
+        },
+        {
+            "type": "java",
+            "name": "Launch GenerateAst",
+            "request": "launch",
+            "mainClass": "tool.GenerateAst",
+            "projectName": "app"
+        },
+        {
+            "type": "java",
             "name": "Launch Eigen",
             "request": "launch",
             "mainClass": "eigen.Eigen",
-            "projectName": "app"
+            "projectName": "app",
+            "args": "${input:pickFile}"
+        },
+        {
+            
         }
-    ]
+    ],
+    "inputs": [
+        {
+          "id": "pickFile",
+          "type": "promptString",
+          "description": ""
+        }
+      ]
 }
